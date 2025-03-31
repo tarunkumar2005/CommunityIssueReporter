@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/sort_newest"
+        android:title="Newest First" />
+    <item
+        android:id="@+id/sort_oldest"
+        android:title="Oldest First" />
+    <item
+        android:id="@+id/sort_most_upvoted"
+        android:title="Most Upvoted" />
+    <item
+        android:id="@+id/sort_least_upvoted"
+        android:title="Least Upvoted" />
+    <item
+        android:id="@+id/sort_recently_updated"
+        android:title="Recently Updated" />
+</menu>

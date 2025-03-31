@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content"
+  android:orientation="vertical"
+  android:background="@drawable/bg_bottom_sheet">
+
+  <!-- Drag Handle -->
+  <View
+    android:layout_width="32dp"
+    android:layout_height="4dp"
+    android:layout_gravity="center_horizontal"
+    android:layout_marginTop="12dp"
+    android:background="@color/divider"
+    android:alpha="0.5" />
+
+  <!-- Header -->
+  <RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp">
+
+    <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="Report New Issue"
+      android:textSize="20sp"
+      android:textColor="@color/primary_text"
+      android:textStyle="bold" />
+
+    <ImageButton
+      android:id="@+id/closeButton"
+      android:layout_width="40dp"
+      android:layout_height="40dp"
+      android:layout_alignParentEnd="true"
+      android:background="?attr/selectableItemBackgroundBorderless"
+      android:src="@drawable/ic_close"
+      app:tint="@color/secondary_text"
+      android:contentDescription="Close" />
+
+  </RelativeLayout>
+
+  <!-- Content -->
+  <ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clipToPadding="false"
+    android:paddingBottom="32dp">
+
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="vertical"
+      android:padding="16dp">
+
+      <!-- Title Field -->
+      <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/CustomTextInputLayout"
+        android:hint="Issue Title"
+        app:startIconDrawable="@drawable/ic_edit"
+        app:startIconTint="@color/primary">
+
+        <com.google.android.material.textfield.TextInputEditText
+          android:id="@+id/titleInput"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:inputType="text"
+          android:maxLines="1" />
+
+      </com.google.android.material.textfield.TextInputLayout>
+
+      <!-- Description Field -->
+      <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/CustomTextInputLayout"
+        android:hint="Description"
+        app:startIconDrawable="@drawable/ic_description"
+        app:startIconTint="@color/primary">
+
+        <com.google.android.material.textfield.TextInputEditText
+          android:id="@+id/descriptionInput"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:inputType="textMultiLine"
+          android:minLines="3"
+          android:gravity="top"
+          android:padding="12dp" />
+
+      </com.google.android.material.textfield.TextInputLayout>
+
+      <!-- Location Field -->
+      <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/CustomTextInputLayout"
+        android:hint="Location"
+        app:startIconDrawable="@drawable/ic_location"
+        app:startIconTint="@color/primary"
+        app:endIconMode="custom"
+        app:endIconDrawable="@drawable/ic_my_location"
+        app:endIconTint="@color/primary"
+        app:endIconContentDescription="Use Current Location">
+
+        <com.google.android.material.textfield.TextInputEditText
+          android:id="@+id/locationInput"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:inputType="text"
+          android:maxLines="1" />
+
+      </com.google.android.material.textfield.TextInputLayout>
+
+      <!-- Current Location TextView -->
+      <TextView
+        android:id="@+id/currentLocationText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Use Current Location"
+        android:textColor="@color/primary"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="4dp"
+        android:drawableStart="@drawable/ic_my_location"
+        android:drawablePadding="8dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:background="?attr/selectableItemBackground"
+        android:padding="4dp" />
+
+      <!-- Image Upload -->
+      <FrameLayout
+        android:id="@+id/imageUploadContainer"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginTop="16dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="?attr/selectableItemBackground">
+
+        <!-- Image Preview -->
+        <ImageView
+          android:id="@+id/previewImage"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:scaleType="centerCrop"
+          android:visibility="gone"
+          android:background="@drawable/bg_image_upload" />
+
+        <!-- Upload Prompt -->
+        <LinearLayout
+          android:id="@+id/uploadPrompt"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:orientation="vertical"
+          android:gravity="center"
+          android:clickable="true"
+          android:focusable="true"
+          android:background="@drawable/bg_image_upload">
+
+          <ImageView
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/ic_add_photo"
+            app:tint="@color/primary" />
+
+          <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Add Photo"
+            android:textColor="@color/primary"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+          <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Tap to choose from gallery"
+            android:textColor="@color/secondary_text"
+            android:textSize="14sp" />
+
+        </LinearLayout>
+
+        <!-- Change Photo Button -->
+        <ImageButton
+          android:id="@+id/changePhotoButton"
+          android:layout_width="40dp"
+          android:layout_height="40dp"
+          android:layout_gravity="end|top"
+          android:layout_margin="8dp"
+          android:background="@drawable/bg_circle_button"
+          android:src="@drawable/ic_edit"
+          android:visibility="gone"
+          app:tint="@color/white"
+          android:contentDescription="Change photo" />
+
+      </FrameLayout>
+
+      <!-- Report Button -->
+      <com.google.android.material.button.MaterialButton
+        android:id="@+id/reportButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Report Issue"
+        style="@style/PrimaryButton"
+        android:layout_marginTop="24dp"
+        android:enabled="false" />
+
+    </LinearLayout>
+
+  </ScrollView>
+
+</LinearLayout> 

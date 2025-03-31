@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:fillViewport="true"
+  android:background="@color/primary_light">
+
+  <androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <!-- Top Wave Design -->
+    <ImageView
+      android:id="@+id/topWave"
+      android:layout_width="match_parent"
+      android:layout_height="150dp"
+      android:scaleType="fitXY"
+      android:src="@drawable/wave_top"
+      app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.card.MaterialCardView
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginHorizontal="24dp"
+      android:layout_marginTop="100dp"
+      android:layout_marginBottom="24dp"
+      style="@style/CustomCard"
+      app:layout_constraintTop_toTopOf="parent"
+      app:layout_constraintBottom_toBottomOf="parent">
+
+      <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <!-- Logo -->
+        <ImageView
+          android:layout_width="80dp"
+          android:layout_height="80dp"
+          android:src="@drawable/img"
+          android:layout_gravity="center"
+          android:layout_marginBottom="16dp" />
+
+        <!-- Title -->
+        <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="Create Account"
+          style="@style/TitleText"
+          android:layout_gravity="center" />
+
+        <!-- Full Name Field -->
+        <com.google.android.material.textfield.TextInputLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          style="@style/CustomTextInputLayout"
+          android:hint="Full Name">
+
+          <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/display_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:maxLines="1" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Email Field -->
+        <com.google.android.material.textfield.TextInputLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          style="@style/CustomTextInputLayout"
+          android:hint="Email">
+
+          <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress"
+            android:maxLines="1" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Password Field -->
+        <com.google.android.material.textfield.TextInputLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          style="@style/CustomTextInputLayout"
+          android:hint="Password"
+          app:passwordToggleEnabled="true">
+
+          <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:maxLines="1" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Progress Indicator -->
+        <com.google.android.material.progressindicator.CircularProgressIndicator
+          android:id="@+id/progress_indicator"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_gravity="center"
+          android:layout_marginTop="16dp"
+          android:visibility="gone"
+          android:indeterminate="true" />
+
+        <!-- Sign Up Button -->
+        <com.google.android.material.button.MaterialButton
+          android:id="@+id/sign_up_button"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:text="Sign Up"
+          style="@style/PrimaryButton"
+          android:layout_marginTop="24dp" />
+
+        <!-- Divider -->
+        <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="horizontal"
+          android:gravity="center"
+          android:layout_marginVertical="16dp">
+
+          <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1"
+            android:background="@color/divider" />
+
+          <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="OR"
+            android:layout_marginHorizontal="16dp"
+            android:textColor="@color/secondary_text" />
+
+          <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1"
+            android:background="@color/divider" />
+        </LinearLayout>
+
+        <!-- Google Sign-Up Button -->
+        <com.google.android.material.button.MaterialButton
+          android:id="@+id/google_sign_up_button"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:text="Continue with Google"
+          style="@style/SecondaryButton"
+          app:icon="@drawable/ic_google"
+          app:iconTint="@color/google_blue"
+          app:iconGravity="start" />
+
+        <!-- Login Link -->
+        <TextView
+          android:id="@+id/login_text"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="Already have an account? Log In"
+          style="@style/LinkText"
+          android:layout_gravity="center"
+          android:layout_marginTop="16dp" />
+
+      </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <!-- Bottom Wave Design -->
+    <ImageView
+      android:id="@+id/bottomWave"
+      android:layout_width="match_parent"
+      android:layout_height="150dp"
+      android:scaleType="fitXY"
+      android:src="@drawable/wave_bottom"
+      app:layout_constraintBottom_toBottomOf="parent" />
+
+  </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView> 

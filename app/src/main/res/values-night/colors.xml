@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <!-- Material Colors -->
+  <color name="primary">#2196F3</color>
+  <color name="primary_dark">#1976D2</color>
+  <color name="accent">#FF80AB</color>
+  <color name="error">#EF5350</color>
+  <color name="error_red">#EF5350</color>
+
+  <!-- Background Colors -->
+  <color name="background">@color/dark_background</color>
+  <color name="card_background">@color/dark_card_background</color>
+  <color name="card_stroke">@color/dark_card_stroke</color>
+  <color name="dialog_background">@color/dark_dialog_background</color>
+  <color name="input_background">#302D5B</color>
+  <color name="surface">#1F1B42</color>
+
+  <!-- Text Colors -->
+  <color name="primary_text">@color/dark_primary_text</color>
+  <color name="secondary_text">@color/dark_secondary_text</color>
+  <color name="divider">#3D3A70</color>
+
+  <!-- Status Colors -->
+  <color name="status_open">#66BB6A</color>
+  <color name="status_pending">#FFB74D</color>
+  <color name="status_closed">#9E9E9E</color>
+  <color name="status_in_progress">#42A5F5</color>
+  <color name="status_resolved">#4CAF50</color>
+
+  <!-- Chip Colors -->
+  <color name="chip_background_selected">#3D3A70</color>
+
+  <!-- Profile Specific Colors -->
+  <color name="profile_cover_background">#1565C0</color>
+  <color name="profile_cover_tint">#801565C0</color>
+  <color name="profile_icon_tint">#42A5F5</color>
+</resources> 

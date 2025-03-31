@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content"
+  android:layout_marginVertical="8dp"
+  app:cardCornerRadius="12dp"
+  app:cardElevation="2dp"
+  app:cardBackgroundColor="@color/card_background"
+  app:strokeColor="@color/divider"
+  app:strokeWidth="1dp"
+  android:clickable="true"
+  android:focusable="true"
+  android:foreground="?attr/selectableItemBackground">
+
+  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- Header Row: Title, Status, Menu -->
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal"
+      android:layout_marginBottom="8dp">
+
+      <TextView
+        android:id="@+id/issueTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_gravity="center_vertical"
+        android:textColor="@color/primary_text"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:maxLines="2"
+        android:ellipsize="end"
+        tools:text="Pothole on Main Street" />
+
+      <!-- Status Badge -->
+      <TextView
+        android:id="@+id/statusBadge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:background="@drawable/bg_status_badge"
+        android:paddingHorizontal="12dp"
+        android:paddingVertical="4dp"
+        android:layout_marginStart="8dp"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        tools:text="OPEN"
+        tools:background="@color/status_open" />
+
+      <!-- Menu -->
+      <ImageButton
+        android:id="@+id/issueMenuButton"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_gravity="center_vertical"
+        android:layout_marginStart="8dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:contentDescription="Issue Options"
+        android:padding="4dp"
+        android:src="@drawable/ic_more_vert"
+        app:tint="@color/primary_text" />
+    </LinearLayout>
+
+    <!-- Description Preview -->
+    <TextView
+      android:id="@+id/issueDescription"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginBottom="12dp"
+      android:ellipsize="end"
+      android:maxLines="2"
+      android:textColor="@color/secondary_text"
+      android:textSize="14sp"
+      tools:text="There's a large pothole on Main Street near the intersection with Oak Avenue. It's causing traffic hazards and potential vehicle damage." />
+
+    <!-- Location -->
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal"
+      android:layout_marginBottom="16dp">
+
+      <ImageView
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:layout_gravity="center_vertical"
+        android:src="@drawable/ic_location"
+        app:tint="@color/primary" />
+
+      <TextView
+        android:id="@+id/issueLocation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_gravity="center_vertical"
+        android:textColor="@color/secondary_text"
+        android:textSize="12sp"
+        android:maxLines="1"
+        android:ellipsize="end"
+        tools:text="Main Street &amp; Oak Avenue" />
+    </LinearLayout>
+
+    <!-- Bottom Row: Reporter, Date, Votes -->
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal">
+
+      <!-- Reporter Info -->
+      <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+          android:id="@+id/reporterName"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:textColor="@color/primary_text"
+          android:textSize="14sp"
+          android:textStyle="bold"
+          tools:text="John Doe" />
+
+        <TextView
+          android:id="@+id/issueDate"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:textColor="@color/secondary_text"
+          android:textSize="12sp"
+          tools:text="2 days ago" />
+      </LinearLayout>
+
+      <!-- Upvote Button -->
+      <com.google.android.material.button.MaterialButton
+        android:id="@+id/upvoteButton"
+        android:layout_width="wrap_content"
+        android:layout_height="36dp"
+        android:layout_gravity="center_vertical"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:paddingHorizontal="12dp"
+        android:text="10"
+        android:textColor="@color/primary_text"
+        app:backgroundTint="@color/input_background"
+        app:cornerRadius="18dp"
+        app:icon="@drawable/ic_arrow_up"
+        app:iconGravity="start"
+        app:iconPadding="4dp"
+        app:iconSize="16dp"
+        app:iconTint="@color/primary"
+        style="@style/Widget.MaterialComponents.Button.TextButton" />
+    </LinearLayout>
+
+  </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView> 
